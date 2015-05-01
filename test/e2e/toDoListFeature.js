@@ -15,6 +15,12 @@ describe('To do list app', function() {
     expect(element(by.repeater('task in Main.taskList')).getText()).toEqual('my first task');
   });
 
+  it("I can post a task to the page by pressing enter", function() {
+    var input = element(by.model('Main.task'));
+    input.sendKeys('my first task', protractor.Key.ENTER);
+    expect(element(by.repeater('task in Main.taskList')).getText()).toEqual('my first task');
+  });
+
   it("I can post multiple tasks to the page", function() {
     var input = element(by.model('Main.task'));
     input.sendKeys('my first task');
