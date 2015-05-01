@@ -4,7 +4,8 @@
   "description": "* Deadline: submit completed pull request by 9am on Monday * You may use whatever level of JavaScript you feel comfortable with - pure JS, jQuery, Angular, or whatever weird and wonderful framework you want to try. Extra points for DogeScript",
   "main": "index.js",
   "scripts": {
-    "test": "protractor test/e2e/conf.js"
+    "test": "protractor test/e2e/conf.js",
+    "testu": "karma start test/unit/karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,13 @@
   },
   "homepage": "https://github.com/DanBlakeman/todo_challenge",
   "devDependencies": {
+    "grunt": "^0.4.5",
     "http-server": "^0.8.0",
+    "jasmine-core": "^2.3.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4",
     "protractor": "^2.0.0"
   }
 }
