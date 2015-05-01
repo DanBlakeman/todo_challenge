@@ -13,6 +13,6 @@
 <h1 id="header"> {{ Main.title }} </h1>
 <input type="text" ng-model="Main.task">
 <button ng-click="Main.addTask()">Add Task!</button>
-<task ng-repeat="task in Main.taskList" ng-click="Main.markComplete($index)" class="task_item" ng-class="{ 'task_item--completed': task.completed }">{{ task.task }}</task>
+<task ng-repeat="task in Main.taskList" ng-click="Main.toggleComplete($index)" class="task_item" ng-class="{ 'task_item--completed': task.completed }">{{ task.task }}</task>
 </body>
 </html>

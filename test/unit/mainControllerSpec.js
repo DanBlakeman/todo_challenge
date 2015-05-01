@@ -43,8 +43,18 @@ describe("Main Controller", function() {
     ctrl.task = 'first task';
     ctrl.addTask();
     expect(ctrl.taskList[0].completed).toEqual(false);
-    ctrl.markComplete(0);
+    ctrl.toggleComplete(0);
     expect(ctrl.taskList[0].completed).toEqual(true);
+  });
+
+  it('task can be unmarked as complete', function() {
+    ctrl.task = 'first task';
+    ctrl.addTask();
+    expect(ctrl.taskList[0].completed).toEqual(false);
+    ctrl.toggleComplete(0);
+    expect(ctrl.taskList[0].completed).toEqual(true);
+    ctrl.toggleComplete(0);
+    expect(ctrl.taskList[0].completed).toEqual(false);
   });
 
 

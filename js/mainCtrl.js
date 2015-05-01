@@ -11,8 +11,8 @@ alwaysDo.controller('MainCtrl', function() {
     self.task = '';
   }
 
-  self.markComplete = function(task_index) {
-    self.taskList[task_index].completed = true;
+  self.toggleComplete = function(task_index) {
+    self.taskList[task_index].completed = !self.taskList[task_index].completed;
   };
 
 });
