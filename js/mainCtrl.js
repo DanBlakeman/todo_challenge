@@ -7,8 +7,12 @@ alwaysDo.controller('MainCtrl', function() {
   self.taskList = [];
 
   self.addTask = function() {
-    self.taskList.push({'task' : self.task});
+    self.taskList.push({'task' : self.task, 'completed': false});
     self.task = '';
   }
+
+  self.markComplete = function(task_index) {
+    self.taskList[task_index].completed = true;
+  };
 
 });

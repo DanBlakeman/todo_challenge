@@ -24,16 +24,28 @@ describe("Main Controller", function() {
   it('can add to taskList using task', function() {
     ctrl.task = 'first task';
     ctrl.addTask();
-    expect(ctrl.taskList).toEqual([{'task' :'first task'}]);
+    expect(ctrl.taskList).toEqual([{'task' :'first task', 'completed' : false}]);
   });
 
-  it('resets task upon adding task to taskList', function() {
+  it('task is not completed when created', function() {
+    ctrl.task = 'first task';
+    ctrl.addTask();
+    expect(ctrl.taskList).toEqual([{'task' :'first task', 'completed': false}]);
+  });
+
+  it('task model resets task upon adding task to taskList', function() {
     ctrl.task = 'first task';
     ctrl.addTask();
     expect(ctrl.task).toEqual('');
   });
 
-
+  it('task can be marked as complete', function() {
+    ctrl.task = 'first task';
+    ctrl.addTask();
+    expect(ctrl.taskList[0].completed).toEqual(false);
+    ctrl.markComplete(0);
+    expect(ctrl.taskList[0].completed).toEqual(true);
+  });
 
 
 

@@ -14,7 +14,7 @@ describe('To do list app', function() {
     first_item = element.all(by.repeater('task in Main.taskList')).get(0);
     expect(first_item)
     first_item.click();
-    expect(first_item.getAttribute('class')).toContain('task_item--complete')
+    expect(first_item.getAttribute('class')).toContain('task_item--completed')
   });
 
 
