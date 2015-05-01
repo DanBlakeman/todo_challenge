@@ -1,0 +1,1 @@
+var alwaysDo = angular.module('AlwaysDo', ['ngResource']);
