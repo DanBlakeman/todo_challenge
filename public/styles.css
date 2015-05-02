@@ -24,3 +24,20 @@ html {
 input {
   margin-bottom: 1em;
 }
+
+controls {
+  display: block;
+  margin-bottom: 1em;
+  background-color: grey;
+  padding: 2em;
+  color: white;
+}
+
+filters {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.add_task {
+  margin-bottom: 1em;
+}

@@ -12,13 +12,19 @@
 
 <body ng-controller="MainCtrl as Main">
   <h1 id="header"> {{ Main.title }} </h1>
-  <form ng-submit="Main.addTask()">
-    <input type="text" ng-model="Main.task">
-    <button>Add Task!</button>
-  </form>
+  <controls class="controls">
+    <form class="add_task" ng-submit="Main.addTask()">
+      <input type="text" ng-model="Main.task">
+      <button>Add Task!</button>
+    </form>
+    <filters>
+      View by:
+      <button ng-click="Main.filterByComplete()">Completed</button>
+      <button ng-click="Main.filterByActive()">Active</button>
+      <button ng-click="Main.removeFilter()">All</button>
+    </filters>
+    <count> Total tasks: {{ Main.taskCount }} </count>
+  </controls>
   <task ng-repeat="task in Main.taskList | filter:Main.filter" ng-click="Main.toggleComplete($index)" class="task_item" ng-class="{ 'task_item--completed': task.completed }">{{ task.task }}</task>
-  <button ng-click="Main.filterByComplete()">Completed</button>
-  <button ng-click="Main.filterByActive()">Active</button>
-  <button ng-click="Main.removeFilter()">All</button>
 </body>
 </html>

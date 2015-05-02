@@ -79,6 +79,12 @@ describe("Main Controller", function() {
     expect(ctrl.filter).toEqual({});
   });
 
+  it('returns the number of tasks added', function() {
+    expect(ctrl.taskCount).toEqual(0);
+    ctrl.task = 'first task';
+    ctrl.addTask();
+    expect(ctrl.taskCount).toEqual(1)
+  });
 
 
 });
