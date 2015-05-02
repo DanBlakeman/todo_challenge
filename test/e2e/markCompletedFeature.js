@@ -5,7 +5,6 @@ describe('To do list app', function() {
     var input = element(by.model('Main.task'));
     input.sendKeys('my first task');
     element(by.buttonText('Add Task!')).click();
-    var input = element(by.model('Main.task'));
     input.sendKeys('my second task');
     element(by.buttonText('Add Task!')).click();
     first_item = element.all(by.repeater('task in Main.taskList')).get(0);

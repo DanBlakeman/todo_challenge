@@ -57,6 +57,28 @@ describe("Main Controller", function() {
     expect(ctrl.taskList[0].completed).toEqual(false);
   });
 
+  it('is initialised with no filter value', function() {
+    expect(ctrl.filter).toEqual({});
+  });
+
+  it('filterByComplete method changes filter to show only complete items', function() {
+    expect(ctrl.filter).toEqual({});
+    ctrl.filterByComplete();
+    expect(ctrl.filter).toEqual({ 'completed' : true });
+  });
+
+  it('filterByActive method changes filter to show only active items', function() {
+    expect(ctrl.filter).toEqual({});
+    ctrl.filterByActive();
+    expect(ctrl.filter).toEqual({ 'completed' : false });
+  });
+
+  it('removeFilter method removes filter', function() {
+    ctrl.filterByActive();
+    ctrl.removeFilter();
+    expect(ctrl.filter).toEqual({});
+  });
+
 
 
 });
