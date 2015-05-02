@@ -3,5 +3,6 @@ exports.config = {
   specs: ['toDoListFeature.js'
          ,'markCompletedFeature.js'
          ,'filterTasksFeature.js'
-         ,'countTasksFeature.js']
+         ,'countTasksFeature.js'
+         ,'clearCompletedFeature.js']
 }

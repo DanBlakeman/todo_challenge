@@ -9,11 +9,14 @@
   text-decoration: line-through;
 }
 
-#header {
+.header {
   font-family: 'Jura', sans-serif;
   font-weight: 600;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-style: bold;
+  text-decoration: none;
+  color: inherit;
+
 }
 
 html {

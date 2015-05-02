@@ -86,5 +86,15 @@ describe("Main Controller", function() {
     expect(ctrl.taskCount).toEqual(1)
   });
 
+  it('clearCompleted removes completed tasks', function() {
+    ctrl.task = 'first task';
+    ctrl.addTask();
+    expect(ctrl.taskCount).toEqual(1)
+    ctrl.toggleComplete(0);
+    expect(ctrl.taskCount).toEqual(1)
+    ctrl.clearCompleted();
+    expect(ctrl.taskCount).toEqual(0)
+  });
+
 
 });

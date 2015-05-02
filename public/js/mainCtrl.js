@@ -30,4 +30,12 @@ alwaysDo.controller('MainCtrl', function() {
     self.filter =  {} ;
   };
 
+  self.clearCompleted = function() {
+    function isActive(task) {
+      return !task.completed;
+    };
+    self.taskList = self.taskList.filter(isActive);
+    self.taskCount = self.taskList.length;
+  };
+
 });

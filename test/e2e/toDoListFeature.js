@@ -5,7 +5,7 @@ describe('To do list app', function() {
   });
 
   it('has a title', function() {
-    expect(element(by.id('header')).getText()).toEqual('Always Do!');
+    expect(element(by.css('.header')).getText()).toEqual('Always Do!');
   });
 
   it("I can post a task to the page", function() {
