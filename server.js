@@ -8,7 +8,7 @@ server.listen(port, function(){
   console.log('Understood Sir, Standing Watch Over Port ' + port);
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 app.get('/', function(req, resp) {
   resp.sendFile('index.html');
