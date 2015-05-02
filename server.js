@@ -9,6 +9,7 @@ server.listen(port, function(){
 });
 
 app.use(express.static('public'));
+app.use(express.static('bower_components'));
 
 app.get('/', function(req, resp) {
   resp.sendFile('index.html');
