@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor test/e2e/conf.js",
-    "testu": "karma start test/unit/karma.conf.js",
-    "start": "nodemon server.js"
+    "testu": "karma start test/unit/karma.conf.js"
   },
   "repository": {
     "type": "git",
