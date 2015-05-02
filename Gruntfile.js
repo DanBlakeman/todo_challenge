@@ -1,13 +1,19 @@
-module.exports = function(grunt){
-
+module.exports = function(grunt) {
+  pkg: grunt.file.readJSON('package.json'),
   grunt.initConfig({
-    jshint: {
-      all: ['Gruntfile.js', 'src/**/*.js', 'spec/**/*.js']
-    }
-  });
+    webdriver: {
+      helloWorld: {
+        tests: 'test/server/**/*'
+      },
+      options: {
+        desiredCapabilities: {
+          browserName: 'chrome'
+        }
+      }
+    },
+  })
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-webdriver');
 
-  grunt.registerTask('default', ['jshint']);
-
+  grunt.registerTask('default', ['webdriver']);
 };
