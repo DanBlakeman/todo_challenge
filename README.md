@@ -52,11 +52,7 @@ So that I have more time to think about other things
 As a person who actually gets stuff done
 I want to mark my tasks as done
 So that I don't do them twice
-```
 
-Here are some other user stories you may choose to implement:
-
-```
 As a person with a lot of tasks
 I want to be able to filter my tasks by "All", "Active", "Complete"
 So that I only see the relevant tasks
