@@ -4,6 +4,7 @@ node_js:
 before_script:
 - npm install -g karma-cli
 - npm install -g karma-coverage
+- webdriver-manager update --standalone
 - webdriver-manager start
 - npm start
 script:
