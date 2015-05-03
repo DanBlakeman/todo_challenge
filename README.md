@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/DanBlakeman/todo_challenge.svg)](https://travis-ci.org/DanBlakeman/todo_challenge)
+[![Coverage Status](https://coveralls.io/repos/DanBlakeman/todo_challenge/badge.svg)](https://coveralls.io/r/DanBlakeman/todo_challenge)
+
 # Always Do!
 
 A fun instantly updating single page application to-do list app made using Angular.js & Node!

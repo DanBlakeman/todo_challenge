@@ -65,6 +65,15 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
+    repoToken: 'vSfEVcet8vETuqjkzGgSaIMM4FY9BWZs4',
+
+    reporters: ['coverage', 'coveralls'],
+
+    coverageReporter: {
+    type: 'lcov', // lcov or lcovonly are required for generating lcov.info files
+    dir: 'coverage/'
+  }
   });
 };
