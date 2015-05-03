@@ -4,3 +4,8 @@ node_js:
 before_script:
 - npm install -g karma-cli
 - npm install -g karma-coverage
+- webdriver-manager start
+- npm start
+script:
+- karma start test/unit/karma.conf.js --single-run --browsers PhantomJS
+- protractor test/e2e/conf.js

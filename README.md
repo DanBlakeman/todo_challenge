@@ -26,7 +26,7 @@ How to run tests?
 
 As this was an experiment with new JS technologies there's a number of different tests which can be run:
 
-As setup, please run 'webdriver-manager start' and 'http-server' to allow the test suites headless browsers to work correctly.
+As setup, please run 'webdriver-manager start' to allow protractors headless browser to work correctly.
 
 You can then run 'karma start test/unit/karma.conf.js' to run the unit tests.
 
