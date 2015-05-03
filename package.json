@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "protractor test/e2e/conf.js",
-    "postinstall": "bower install",
+    "postinstall": "bower install", "mv bower_components /public"
     "testu": "karma start test/unit/karma.conf.js"
   },
   "repository": {

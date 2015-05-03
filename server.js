@@ -23,12 +23,12 @@ var port = process.env.PORT || 3000;
 //   }
 // });
 
-// server.listen(port, function(){
-//   console.log('Understood Sir, Standing Watch Over Port ' + port);
-// });
+server.listen(port, function(){
+  console.log('Understood Sir, Standing Watch Over Port ' + port);
+});
 
 app.use(express.static('public'));
-app.use(express.static('bower_components'));
+// app.use(express.static('bower_components'));
 
 
 
